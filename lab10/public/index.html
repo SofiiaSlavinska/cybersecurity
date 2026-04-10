@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Camp DB</title></head>
+<body style="font-family: sans-serif; padding: 20px;">
+    
+    <div style="background: #f9f9f9; padding: 20px; margin-bottom: 20px; border: 1px solid #ccc;">
+        <h2>Пошук по базі (SQL Injection Test)</h2>
+        <form action="/search-bookings" method="GET">
+            <label>Введи ім'я (або хакерський пейлоад):</label><br>
+            <input type="text" name="name" style="width: 300px; padding: 5px;" value="John">
+            <button type="submit" style="padding: 5px;">Шукати</button>
+        </form>
+    </div>
+
+    <h2>Форма бронювання</h2>
+    <form action="/book" method="POST">
+        <input type="text" name="name" placeholder="Name" required><br>
+        <input type="text" name="surname" placeholder="Surname"><br>
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="number" name="age" placeholder="Age"><br>
+        <input type="date" name="date"><br><br>
+        <button type="submit">Зберегти у базу</button>
+    </form>
+</body>
+</html>

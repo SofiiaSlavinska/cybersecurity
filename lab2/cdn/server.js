@@ -26,4 +26,4 @@ app.get('/debug', (req, res) => {
     });
 });
 
-app.listen(6000, () => console.log('[System] Starting CDN on Port 6000...'));
+app.listen(6001, () => console.log('[System] Starting CDN on Port 6001...'));

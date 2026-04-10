@@ -13,6 +13,11 @@ if (config.mode === 'mode1') {
 app.use((req, res, next) => {
     if (config.mode === 'csp-strict') {
         res.setHeader('Content-Security-Policy', "default-src 'self'");
+    } else if (config.mode === 'csp-balanced') {
+        res.setHeader(
+            'Content-Security-Policy', 
+            "default-src 'self'; img-src *; style-src *; script-src 'self' http://localhost:4000 http://localhost:6000"
+        );
     }
     next();
 });

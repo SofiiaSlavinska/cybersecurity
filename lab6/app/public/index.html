@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SecureMail Pro</title>
+</head>
+<body>
+    <h2>SecureMail Pro - Lab 6</h2>
+    <div id="login-section">
+        <input type="text" id="login-user" placeholder="Username (admin)">
+        <input type="password" id="login-pass" placeholder="Password (password123)">
+        <button onclick="login()">Login</button>
+        <button onclick="logoutZombie()" style="background: red; color:white;">Zombie Logout (Уразливий)</button>
+        <button onclick="logoutSecure()" style="background: green; color:white;">Secure Logout (Безпечний)</button>
+    </div>
+    
+    <h3>Emails / Status:</h3>
+    <pre id="email-list" style="background:#eee; padding:10px;"></pre>
+
+    <script src="/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Camp Booking</title>
+</head>
+<body style="font-family: sans-serif; padding: 20px;">
+    <h2>Camp Booking Form</h2>
+    
+    <button onclick="toggleValidation()" id="valBtn" style="background: green; color: white; padding: 5px; margin-bottom: 20px;">
+        [УВІМКНЕНО] Клієнтська валідація (Task 2)
+    </button>
+
+    <form id="bookingForm" action="/book" method="POST">
+        <label>Name:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Surname:</label><br>
+        <input type="text" name="surname" required><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>Age:</label><br>
+        <input type="number" name="age" min="5" max="100" required><br><br>
+
+        <label>Date of Booking:</label><br>
+        <input type="date" name="date" required><br><br>
+
+        <button type="submit" style="padding: 10px 20px; font-weight: bold;">Submit Booking</button>
+    </form>
+
+    <script>
+        function toggleValidation() {
+            let form = document.getElementById('bookingForm');
+            let btn = document.getElementById('valBtn');
+            if (form.hasAttribute('novalidate')) {
+                form.removeAttribute('novalidate');
+                btn.innerText = "[УВІМКНЕНО] Клієнтська валідація (Task 2)";
+                btn.style.background = "green";
+            } else {
+                form.setAttribute('novalidate', 'true');
+                btn.innerText = "[ВИМКНЕНО] Клієнтська валідація (Task 1 Chaos)";
+                btn.style.background = "red";
+            }
+        }
+    </script>
+</body>
+</html>
